@@ -41,7 +41,7 @@ import Cl_Materia from "./Cl_Materia";
     let salida = document.getElementById("salida");
     salida.innerHTML += "<br>";
     salida.innerHTML +=
-    '<br> Porcentaje de aprobados: ' + materia.calcPorcAprobados() + ' %';
+    '<br> Porcentaje de aprobados: ' + materia.calcPorcAprobados().toFixed(2) + ' %';
     salida.innerHTML += 
     '<br>Cedula de uno de los mejores estudiantes: ' + 
     materia._cedulaMayorNota;
