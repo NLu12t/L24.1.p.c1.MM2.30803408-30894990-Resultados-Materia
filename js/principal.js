@@ -40,5 +40,5 @@
 
     //mostramos los resultados
     let salida = document.getElementById("salida");
-    salida.innerHTML = `Porcentaje de aprobados: ${Cl_Materia.porcAprobados()}% 
-    <br> Cédula de uno de los mejores estudiantes: ${Cl_Materia._auxCE}`;
+    salida.innerHTML += "Porcentaje de aprobados: " + Cl_Materia.porcAprobados() + "%<br>";
+    salida.innerHTML += "Cedula de uno de los mejores estudiantes: " + Cl_Materia.getAuxCE() + "<br>";
