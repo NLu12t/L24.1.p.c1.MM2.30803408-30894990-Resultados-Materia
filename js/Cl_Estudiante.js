@@ -1,24 +1,19 @@
 export default class Cl_Estudiante {
-    constructor(cedula, NotaF) {
-        this._cedula = 0;
-        this._NotaF = 0;
+    constructor(c, nF) {
+        this.cedula = c;
+        this.notaF = nF;
     }
-
-    //metodos
-
-    setCedula(c) {
+    // métodos set y get
+    set cedula(c) {
         this._cedula = c;
     }
-
-    getCedula() {
+    set notaF(nF) {
+        this._notaF = nF;
+    }
+    get cedula() {
         return this._cedula;
     }
-
-    setNotaF(n) {
-        this._NotaF = n;
-    }
-
-    getNotaF() {
-        return this._NotaF;
+    get notaF() {
+        return this._notaF;
     }
 }

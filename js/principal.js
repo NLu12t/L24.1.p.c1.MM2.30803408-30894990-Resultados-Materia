@@ -15,8 +15,8 @@
  * Cédula de uno de los mejores estudiantes: 333
 */
 
-    import Cl_Estudiante from "./Cl_Materia";
-    import Cl_Materia from "./Cl_Estudiante";
+import Cl_Estudiante from "./Cl_Estudiante";
+import Cl_Materia from "./Cl_Materia";
 
     //instanciamos al objeto est
     let est1 = new Cl_Estudiante(888, 60);
@@ -27,18 +27,21 @@
     let est6 = new Cl_Estudiante(666, 90);
     let est7 = new Cl_Estudiante(444, 48);
     let est8 = new Cl_Estudiante(222, 60);
-
-    let Cl_Materia = new Cl_Materia();
-    Cl_Materia.procesarEstudiantes(est1);
-    Cl_Materia.procesarEstudiantes(est2);
-    Cl_Materia.procesarEstudiantes(est3);
-    Cl_Materia.procesarEstudiantes(est4);
-    Cl_Materia.procesarEstudiantes(est5);
-    Cl_Materia.procesarEstudiantes(est6);
-    Cl_Materia.procesarEstudiantes(est7);
-    Cl_Materia.procesarEstudiantes(est8);
-
+    let materia = new Cl_Materia();
+    materia.procesarEstudiantes(est1);
+    materia.procesarEstudiantes(est2);
+    materia.procesarEstudiantes(est3);
+    materia.procesarEstudiantes(est4);
+    materia.procesarEstudiantes(est5);
+    materia.procesarEstudiantes(est6);
+    materia.procesarEstudiantes(est7);
+    materia.procesarEstudiantes(est8);
+    
     //mostramos los resultados
     let salida = document.getElementById("salida");
-    salida.innerHTML += "Porcentaje de aprobados: " + Cl_Materia.porcAprobados() + "%<br>";
-    salida.innerHTML += "Cedula de uno de los mejores estudiantes: " + Cl_Materia.getAuxCE() + "<br>";
+    salida.innerHTML += "<br>";
+    salida.innerHTML +=
+    '<br> Porcentaje de aprobados: ' + materia.calcPorcAprobados() + ' %';
+    salida.innerHTML += 
+    '<br>Cedula de uno de los mejores estudiantes: ' + 
+    materia._cedulaMayorNota;
